@@ -8,7 +8,6 @@ for i in range (len(listA)):
     mynum = listA[i]
     if (mynum % 2) == 1:
         listC.append(mynum)
-print(listC)
 for i in range(len(listB)):
     mynumm = listB[i]
     if (mynumm % 2) == 1:
