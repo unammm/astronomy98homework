@@ -23,21 +23,19 @@ def minandmax(list1):
    print(tupleminmax)
    return [tupleminmax]
 """
-
-# PROBLEM 3  FIX!!
+# PROBLEM 3
 """
 def leapYear(year):
-    if year % 4 == year / 4: 
-        if year % 400 == year / 400: 
-            if year % 100 == year / 100:
-                print("True")
-                return ["True"]
-            else: 
-                print("False")
-                return ["False"]
-
-leapYear(2024)
+    if (year % 4 == 0 and year % 100 != 0):
+        return True
+    elif (year % 400 == 0):
+        return False
+    else: 
+        return False
+    
+print(leapYear(year))
 """
+
 
 # PROBLEM 4
 """
@@ -46,19 +44,19 @@ def calculate_bmi(weight, height):
 """
 
 # PROBLEM 5 
-"""
+
 def rotate_digits(digits):
     last_digit = digits % 10
     first_digits = digits // 10
     print(f"{last_digit}{first_digits}")
     return [f"{last_digit}{first_digits}"]
-"""
+
 
 ### For questions #6-10, write the solution with a for-loop and a while-loop.
 # If it is not possible to write it with a for-loop or while-loop, detail why.
 
-# PROBLEM 6 FIX!!!
-"""
+# PROBLEM 6 
+
 list1 = [1, 3, 5, 7, 4, 6]
 
 def findMax(lis):
@@ -70,10 +68,10 @@ def findMax(lis):
             return [x for x > seen]
         
 findMax(list1)
-"""
 
-# PROBLEM 7 FIX !!!
-"""
+
+# PROBLEM 7 
+
 list1 = [1, 3, 5, 7, 4, 6]
 def findMin(lis):
     for x in range(len(lis)):
@@ -85,10 +83,10 @@ def findMin(lis):
             return [min]
         
 findMin(list1)
-"""
 
-# PROBLEM 8 FIX!!!
-"""
+
+# PROBLEM 8 
+
 def product(numList):
     input = numList[i]
     for i in range(numList):
@@ -98,14 +96,15 @@ def product(numList):
 
 list = [ 1, 2, 3]
 product(list)
-"""
 
 
-# PROBLEM 9 FIX!!!!
-"""
+
+# PROBLEM 9
+
 string1 = "pneumonoultramicroscopicsilicovolcanoconiosis"
 
 def countVowels(str):
+    
 """
 # PROBLEM 10 FIX!!!
 """

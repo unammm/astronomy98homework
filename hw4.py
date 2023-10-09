@@ -78,11 +78,11 @@ end of the code.
 
 #Q2 PART 2
 
-list0502 = []
-for i in range (len(list050)):
-    ii = i**2
-    list0502.append(ii)
-print(list0502)
+def squareList(list):
+    for i in range (len(list)):
+        ii = i**2
+        list.append(ii)
+    print(list)
 
 
 """
