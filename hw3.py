@@ -64,8 +64,6 @@ def findMax(lis):
             max1 = num
     return max1 #don't use brackets unless want return to be a list!
 
-findMax(list1)
-
 # as a while function
 def whilefindMax(lis):
     max1 = lis[0]
@@ -125,13 +123,12 @@ def whileProduct(numList):
 
 
 # PROBLEM 9
+
 """
 For both functions, it is assumed that all input strings include only lowercase letters!
 Mainly because it would be more of the same of what was done for the lowercase vowels,
 just with uppercase letters. 
 """
-
-string1 = "pneumonoultramicroscopicsilicovolcanoconiosis"
 
 # as a for function
 def countVowels(str):
