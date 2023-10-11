@@ -1,20 +1,21 @@
-# PROBLEM 1 good
-"""
+# PROBLEM 1
+
 def power(input, power):
     input1 = 1
     for i in range(power):
         input1 = input1 * input
     print(input1)
     return [input1]
-"""
+
 """
 input1 or input' = 1 since input^0 will ALWAYS be 1 and it's actually 
 x^y = 1 * input * input * input * input, meaning that input1 for first i 
 is accounted for. 
 """
 
-# PROBLEM 2 good
-"""
+
+# PROBLEM 2
+
 import math
 def minandmax(list1):
    max_val = max(list1)
@@ -22,11 +23,10 @@ def minandmax(list1):
    tupleminmax = (min_val, max_val)
    print(tupleminmax)
    return [tupleminmax]
-"""
 
 
-# PROBLEM 3 good
-"""
+# PROBLEM 3
+
 def leapYear(year):
     if (year % 4 == 0 and year % 100 != 0):
         return True
@@ -34,32 +34,28 @@ def leapYear(year):
         return False
     else: 
         return False
-"""
 
 
-# PROBLEM 4 good
-"""
+# PROBLEM 4
+
 def calculate_bmi(weight, height):
     return weight / (height ** 2)
-"""
 
-# PROBLEM 5 good
-"""
+
+# PROBLEM 5
+
 def rotate_digits(digits):
     last_digit = digits % 10
     first_digits = digits // 10
     print(f"{last_digit}{first_digits}")
     return [f"{last_digit}{first_digits}"]
-"""
 
 
-### For questions #6-10, write the solution with a for-loop and a while-loop.
-# If it is not possible to write it with a for-loop or while-loop, detail why.
+# PROBLEM 6: Maximum
 
-# PROBLEM 6: Maximum good
-"""
 list1 = [1, 3, 5, 7, 4, 6]
 
+# as a for function
 def findMax(lis):
     max1 = lis[0]
     for x in range(len(lis)):
@@ -69,21 +65,22 @@ def findMax(lis):
     return max1 #don't use brackets unless want return to be a list!
 
 findMax(list1)
-"""
-"""
+
+# as a while function
 def whilefindMax(lis):
     max1 = lis[0]
     x = 0
     while x < len(lis):
         num = lis[x]
         if num > max1:
-            x = x + 1
             max1 = num
+        x = x + 1
     return max1
-"""
 
-# PROBLEM 7: Minimum good
-"""
+
+# PROBLEM 7: Minimum
+
+# as a for function
 def findMin(lis):
     min1 = lis[0]
     for x in range(len(lis)):
@@ -91,22 +88,22 @@ def findMin(lis):
         if num < min1:
             min1 = num
     return min1
-"""
 
-"""
+# as a while function
 def whilefindMin(lis):
     min1 = lis[0]
     x = 0
     while x < len(lis):
         num = lis[x]
         if num < min1:
-            x = x + 1
             min1 = num
+        x = x + 1
     return min1
-"""
 
-# PROBLEM 8 good
-"""
+
+# PROBLEM 8
+
+# as a for function
 def product(numList):
     input1 = numList[0]
     for i in range((len(numList))):
@@ -114,25 +111,29 @@ def product(numList):
         input1 = input1 * input
     print(input1)
     return [input1]
-"""
+
+#as a while function
 def whileProduct(numList):
     input1 = numList[0]
     x = 0
     while x < len(numList):
         input = numList[x]
         input1 = input1 * input
+        x = x + 1
     print(input1)
     return input1
 
-List = [ 1, 2, 3, 4 ]
 
-whileProduct(List)
-
-
-# PROBLEM 9 good
+# PROBLEM 9
 """
+For both functions, it is assumed that all input strings include only lowercase letters!
+Mainly because it would be more of the same of what was done for the lowercase vowels,
+just with uppercase letters. 
+"""
+
 string1 = "pneumonoultramicroscopicsilicovolcanoconiosis"
 
+# as a for function
 def countVowels(str):
     for x in range(len(str)):
         a = str.count("a")
@@ -141,17 +142,27 @@ def countVowels(str):
         o = str.count("o")
         u = str.count("u")
     return [f"The number of vowels is {a + e + i + o + u}"]
-"""
+
+# as a while function
+def whilecountVowels(str):
+    vowelcount = 0
+    x = 0
+    while x < len(str):
+        letter = str[x]
+        if letter=="a" or letter=="e" or letter=="i" or letter=="o" or letter=="u":
+            vowelcount = vowelcount + 1
+        x = x + 1
+    return [f"The number of vowels is {vowelcount}"]
 
 
+# PROBLEM 10
 
-# PROBLEM 10 good
-"""
 def sumDigits(num):
-    input1 = 0
-    for i in range(len(num)):
-        input = num[i]
-        input1 = input1 + input
-    print(input1)
-    return[input1]
-"""
+    x = 0
+    total = 0
+    strnum = str(num)
+    while x < len(strnum):
+        digit = strnum[x]
+        total = total + int(digit)
+        x = x + 1
+    return [f"the digital root is {total}"]
